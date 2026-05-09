@@ -1,4 +1,4 @@
-const findbook = (title) => {
+const findBook = (title) => {
   const catalogue = { dune: 89, neuromancer: 79, foundation: 75 };
   return { title, price: catalogue[title] };
 };
@@ -20,10 +20,10 @@ const confirmPurchase = (reservationCode, price) => {
 };
 
 const buyBook = (title) => {
-  const book = findbook(title);
+  const book = findBook(title);
   const reservationCode = reservStock(book);
   const purchaseConfirmation = confirmPurchase(reservationCode, book.price);
   return purchaseConfirmation;
 };
 
-export { findbook, reservStock, confirmPurchase, buyBook };
+export { findBook, reservStock, confirmPurchase, buyBook };
